@@ -9,7 +9,9 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => ({
     caseApi: new CasesAPI()
-  })
+  }),
+  introspection: true, // enables introspection of the schema
+  playground: true // enables the actual playground
 });
 const PORT = process.env.PORT || 3000;
 server.listen({ port: PORT }).then(({ url }) => {
