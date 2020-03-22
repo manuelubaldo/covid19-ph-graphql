@@ -2,8 +2,32 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Query {
-    cases: [Case]!
+    cases(
+      pageSize: Int
+      pageNum: Int
+      sortBy: SortFields
+      sortDirection: SortDirection
+    ): CaseResult!
     case(id: Int): Case
+  }
+
+  enum SortFields {
+    id
+    caseNum
+    age
+    gender
+    nationality
+    residence
+    travelHistory
+    symptoms
+    confirmed
+    hospital
+    status
+  }
+
+  enum SortDirection {
+    asc
+    desc
   }
 
   type Case {
@@ -19,6 +43,13 @@ const typeDefs = gql`
     hospital: String!
     status: String
     link: String
+  }
+
+  type CaseResult {
+    totalCount: Int!
+    totalPages: Int!
+    pageSize: Int!
+    cases: [Case]!
   }
 `;
 module.exports = typeDefs;
