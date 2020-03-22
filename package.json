@@ -1,0 +1,23 @@
+{
+  "name": "covid-19-graphql",
+  "version": "0.0.1",
+  "description": "COVID-19 Graphql API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon index.js"
+  },
+  "author": "@manuelubaldo",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource": "^0.7.0",
+    "apollo-server": "^2.11.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "google-spreadsheet": "^3.0.10",
+    "graphql": "^14.6.0",
+    "node-cache": "^5.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "repository": "https://github.com/manuelubaldo/covid19-ph-graphql"
+}

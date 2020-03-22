@@ -1,2 +1,2 @@
-# covid19-ph-graphql
-Track Phlippines COVID-19 cases using GraphQL
+# COVID-19 PH GraphQL
+Track Phlippines COVID-19 cases using GraphQL.
