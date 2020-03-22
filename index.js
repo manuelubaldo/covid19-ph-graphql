@@ -11,7 +11,7 @@ const server = new ApolloServer({
     caseApi: new CasesAPI()
   })
 });
-
-server.listen().then(({ url }) => {
+const PORT = process.env.PORT || 3000;
+server.listen({ port: PORT }).then(({ url }) => {
   console.log(`Listening at ${url}`);
 });
